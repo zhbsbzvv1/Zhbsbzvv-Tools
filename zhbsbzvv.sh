@@ -14,11 +14,12 @@ l__/  ||  l  ||  o  )(   \\_ |  o  )l__/  ||  |  ||  |  |\n\
 l_____jl__j__jl_____j  \\___jl_____jl_____j  \\_/    \\_/  \n\
                                                         \n\
   GitHub: https://github.com/zhbsbzvv1\n\
-\033[33;4mVersiyon:\033[0m 1.5       \033[33;4mCTRL+C:\033[0m çıkış         \033[33;4mYazar:\033[0m Zhbsbzvv\n\n\
+\033[33;4mVersiyon:\033[0m 1.7       \033[33;4mCTRL+C:\033[0m çıkış         \033[33;4mYazar:\033[0m Zhbsbzvv\n\n\
 \e[37m[1]\e[36m Güncelleme & Gereksinimler    \e[37m[2]\e[36m Zphisher                      \n\
 \e[37m[3]\e[36m TBomb                         \e[37m[4]\e[36m CamPhish                      \n\
 \e[37m[5]\e[36m Facebash                      \e[37m[6]\e[36m Track-IP                      \n\
-\e[37m[7]\e[36m İndirilenleri Temizle         \e[37m[8]\e[36m Çıkış                         \n\
+\e[37m[7]\e[36m RedHawk                       \e[37m[8]\e[36m HackerPro                     \n\
+\e[37m[9]\e[36m İndirilenleri Temizle         \e[37m[10]\e[36m Çıkış                        \n\
 "
 
 read -p "Seçiminiz (Örn: 1): " islem
@@ -90,6 +91,28 @@ case $islem in
         
     7|07)
         clear
+        echo -e "\033[47;3;35m RedHawk kuruluyor...\033[0m"
+        sleep 2
+        cd Tools
+        git clone https://github.com/Tuhinshubhra/RED_HAWK
+        cd RED_HAWK
+        php rhawk.php
+        ;;
+
+    8|08)
+        clear
+        echo -e "\033[47;3;35m HackerPro kuruluyor...\033[0m"
+        sleep 2
+        cd Tools
+        apt update && apt upgrade && apt install git && apt install python2
+        git clone https://github.com/jaykali/hackerpro.git
+        cd hackerpro
+        sudo bash install.sh
+        python2 hackerpro.py
+        ;;
+        
+    9|09)
+        clear
         echo -e "\033[47;3;35m İndirilen araçlar temizleniyor...\033[0m"
         sleep 2
         rm -rf Tools
@@ -98,7 +121,7 @@ case $islem in
         bash tool.sh
         ;;
         
-    8|08)
+    10|010)
         echo "Çıkış yapılıyor..."
         exit 0
         ;;
